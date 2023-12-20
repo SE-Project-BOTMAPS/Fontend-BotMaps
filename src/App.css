@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-  background-color: blue;
-} */
-/* AppStyles.css */
-
 .mapcontainer {
   position: absolute;
   top: 15%;
   left: 30%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .OASYSLAB,
@@ -27,10 +23,11 @@
 .lab{
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
+  /* box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5); */
 }
 
-.none,.fire,.network,.walk,.lift,.stair{
+.none,.fire,.network,.walk,.lift,.stair,.restroom,.none{
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
