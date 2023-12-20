@@ -5,9 +5,9 @@ import "./styles/styles.css";
 function App() {
   return (
     <div className="">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <div className="mapcontainer">
-        {/* study room */}
+      {/* study room */}
       <div style={{ left: "0px", top: "300px", width: "100px", height: "200px", backgroundColor: "#94C8DA" }} className="study">518</div>
       <div style={{ left: "200px", top: "500px", width: "200px", height: "100px", backgroundColor: "#94C8DA" }} className="study">516</div>
       <div style={{ left: "100px", top: "200px", width: "200px", height: "100px", backgroundColor: "#94C8DA" }} className="study">521</div>
@@ -39,19 +39,19 @@ function App() {
       <div style={{ left: "200px", top: "100px", width: "100px", height: "50px", backgroundColor: "#9EABD9" }} className="lift">Lift</div>
 
       {/* restroom */}
-      <div style={{ left: "150px", top: "0px", width: "50px", height: "50px", backgroundColor: "#9EABD9" }} className="R516">GR</div>
-      <div style={{ left: "220px", top: "0px", width: "80px", height: "50px", backgroundColor: "#9EABD9" }} className="R516">MR</div>
+      <div style={{ left: "150px", top: "0px", width: "50px", height: "50px", backgroundColor: "#9EABD9" }} className="restroom">GR</div>
+      <div style={{ left: "220px", top: "0px", width: "80px", height: "50px", backgroundColor: "#9EABD9" }} className="restroom">MR</div>
 
       {/* none */}
-      <div style={{ left: "500px", top: "0px", width: "100px", height: "150px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "300px", top: "100px", width: "40px", height: "50px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "200px", top: "350px", width: "150px", height: "100px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "250px", top: "50px", width: "50px", height: "25px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "250px", top: "75px", width: "50px", height: "25px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "440px", top: "350px", width: "60px", height: "50px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "400px", top: "370px", width: "40px", height: "30px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "440px", top: "255px", width: "60px", height: "45px", backgroundColor: "#4D4D4D" }} className="R516"></div>
-      <div style={{ left: "450px", top: "200px", width: "100px", height: "45px", backgroundColor: "#4D4D4D" }} className="R516"></div>
+      <div style={{ left: "500px", top: "0px", width: "100px", height: "150px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "300px", top: "100px", width: "40px", height: "50px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "200px", top: "350px", width: "150px", height: "100px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "250px", top: "50px", width: "50px", height: "25px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "250px", top: "75px", width: "50px", height: "25px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "440px", top: "350px", width: "60px", height: "50px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "400px", top: "370px", width: "40px", height: "30px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "440px", top: "255px", width: "60px", height: "45px", backgroundColor: "#4D4D4D" }} className="none"></div>
+      <div style={{ left: "450px", top: "200px", width: "100px", height: "45px", backgroundColor: "#4D4D4D" }} className="none"></div>
 
       {/* walkway */}
       <div style={{ left: "150px", top: "00px", width: "450px", height: "300px", backgroundColor: "grey", zIndex: "-1" }} className="walk"></div>
