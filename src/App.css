@@ -20,11 +20,52 @@
 
 .study,
 .arjan,
+.naksuksa,
 .lab{
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   border: 1px solid rgb(255, 255, 255);
+  z-index: 1; 
+
   /* box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5); */
+}
+
+/* .R412{ */
+  /* position: absolute; */
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; */
+  /* border: 5px solid rgb(255, 0, 0); */
+  /* z-index: 0; */
+  /* width: 70px; */
+  /* height: 100px; */
+  /* top: 500px; */
+  /* left: 130px; */
+/* } */
+.R412-2{
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 5px solid rgb(255, 255, 255);
+  z-index: 1;
+  width: 70px;
+  height: 100px;
+  top: 500px;
+  left: 130px;
+}
+.R412-1{
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 5px solid rgb(255, 255, 255);
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  top: 530px;
+  left: 100px;
+}
+
+.admin{
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 1px solid rgb(255, 255, 255);
+  z-index: 0;
 }
 
 .none,.fire,.network,.walk,.lift,.stair,.restroom,.none{
@@ -32,11 +73,29 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
+.fire{
+  z-index: 1;
+}
+
+.none{
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.specialnone{
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  z-index: 0;
+  border: 1px solid black;
+}
+
 .study:hover,
 .arjan:hover,
+.admin:hover,
+.naksuksa:hover,
 .lab:hover {
   transform: scale(2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
-  z-index: 1; /* Bring the hovered div to the front */
+  z-index: 2; /* Bring the hovered div to the front */
 }
