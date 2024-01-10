@@ -1,0 +1,30 @@
+.select-button {
+  border: 1px solid #232325;
+  background: #fafafc;
+  color: #cacaca;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-family: Inter;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+}
+.select-button:hover {
+  background: #efeff0;
+}
+.select-button.floor5 {
+  border-radius: 0 0.75rem 0.75rem 0;
+  transform: translateX(-1px);
+}
+.select-button.floor4 {
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+.select-button.active {
+  background: #fff;
+  color: #000;
+}
+.select-button.active:hover {
+  background: #fafafc;
+}
+.select-button p {
+  margin: 0;
+}

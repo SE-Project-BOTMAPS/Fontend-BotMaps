@@ -1,1 +1,75 @@
-    
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+@layer base {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    background: #fafafc;
+  }
+  hr {
+    background: #d9d9d9;
+    height: 1px;
+    border: none;
+    margin: 0.5rem 0;
+  }
+}
+.FloorContianer {
+  position: relative;
+  padding: 2rem;
+  margin-top: 5rem;
+  scale: 0.8;
+}
+.mapContainer {
+  position: absolute;
+}
+
+.OASYSLAB,
+.R518,
+.R516 {
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 1px solid black;
+}
+
+.study,
+.arjan,
+.lab {
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 1px solid rgb(255, 255, 255);
+  /* box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5); */
+}
+
+.none,
+.fire,
+.network,
+.walk,
+.lift,
+.stair,
+.restroom,
+.none {
+  position: absolute;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.study:hover,
+.arjan:hover,
+.lab:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  z-index: 1; /* Bring the hovered div to the front */
+}
