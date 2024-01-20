@@ -1,18 +1,11 @@
 import "../list.css";
-interface classDescription {
-  courseName: string;
-  courseCode: string;
-  courseInstructor: string;
-}
-interface data {
-  roomNumber: string;
-  time: string;
-  classDescription?: classDescription;
-  instrunctor?: string;
-}
+
+// type
+import type { ShowEvent } from "../../../../state/slices/types/sideBar.ts";
+
 interface listData {
   isStudyRoom: boolean;
-  data: data[];
+  data?: ShowEvent[];
 }
 const DailyList = ({ data, isStudyRoom }: listData) => {
   return (
@@ -32,7 +25,7 @@ const DailyList = ({ data, isStudyRoom }: listData) => {
           <hr />
         </div>
         <ul className="list-container px-2">
-          {data.map((data, index) => (
+          {data?.map((data, index) => (
             <li key={index} className="list-item-contianer my-3 px-6 py-5">
               <div className="flex">
                 <h6>{data.roomNumber}</h6>
@@ -49,7 +42,7 @@ const DailyList = ({ data, isStudyRoom }: listData) => {
                   </div>
                 ) : (
                   <div className="instructor mr-7">
-                    <p>{data.instrunctor}</p>
+                    <p>{data.instructor}</p>
                   </div>
                 )}
               </div>

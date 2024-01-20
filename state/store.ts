@@ -1,9 +1,10 @@
-
 import { configureStore } from "@reduxjs/toolkit";
 import FloorReducer from "./slices/floorSlice";
+import SlideBarReducer from "./slices/leftSideBarSlice.ts";
 export const store = configureStore({
     reducer: {
-        Floor: FloorReducer
+        Floor: FloorReducer,
+        SlideBar: SlideBarReducer
     }
 });
 
