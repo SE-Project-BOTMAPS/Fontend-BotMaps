@@ -32,7 +32,7 @@ const FloorPlan = () => {
           <p>5th floor</p>
         </button>
       </div>
-      <div className="FloorContianer">
+      <div className="FloorContainer">
         {
           // should be FourthFloor instead of null
           FloorState.floor === 5 ? <FifthFloor /> : <FourthFloor />
