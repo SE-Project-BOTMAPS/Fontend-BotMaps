@@ -10,13 +10,6 @@
   box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.OASYSLAB,
-.R518,
-.R516 {
-  position: absolute;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  border: 1px solid black;
-}
 
 .study,
 .arjan,
@@ -24,53 +17,30 @@
 .lab{
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
+  border: 1px solid black;
   z-index: 1; 
-
-  /* box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5); */
-}
-
-/* .R412{ */
-  /* position: absolute; */
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; */
-  /* border: 5px solid rgb(255, 0, 0); */
-  /* z-index: 0; */
-  /* width: 70px; */
-  /* height: 100px; */
-  /* top: 500px; */
-  /* left: 130px; */
-/* } */
-.R412-2{
-  position: absolute;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  border: 5px solid rgb(255, 255, 255);
-  z-index: 1;
-  width: 70px;
-  height: 100px;
-  top: 500px;
-  left: 130px;
-}
-.R412-1{
-  position: absolute;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  border: 5px solid rgb(255, 255, 255);
-  z-index: 1;
-  width: 70px;
-  height: 70px;
-  top: 530px;
-  left: 100px;
+  text-align: center;
+  margin:  auto;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .admin{
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
+  border: 1px solid black;
   z-index: 0;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .none,.fire,.network,.walk,.lift,.stair,.restroom,.none{
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+  
 }
 
 .fire{
