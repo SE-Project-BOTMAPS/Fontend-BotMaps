@@ -31,13 +31,14 @@
 .FloorContainer {
   position: relative;
   padding: 2rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   scale: 0.8;
 }
 .mapContainer {
+  /* scale: 2; */
   position: absolute;
-  top: 15%;
-  left: 30%;
+  margin-top: 10rem;
+  left: 25%;
   transform: translate(-50%, -50%);
   box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5);
 }

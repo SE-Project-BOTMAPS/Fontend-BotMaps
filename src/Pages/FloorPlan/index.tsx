@@ -8,12 +8,14 @@ import {
 
 import FourthFloor from "../../Component/floorPlan/fourthFloor.tsx";
 import FifthFloor from "../../Component/floorPlan/fifthFloor.tsx";
+import Guildline from "../../Component/floorPlan/guildline.tsx";
 
 const FloorPlan = () => {
   const FloorState = useAppSelector(FloorSelector);
   const dispatch = useAppDispatch();
+  
   return (
-    <div>
+    <div className=""> 
       <div className="flex justify-center mt-10">
         <button
           className={`select-button floor4 ${
@@ -32,13 +34,14 @@ const FloorPlan = () => {
           <p>5th floor</p>
         </button>
       </div>
-      <div className="FloorContainer">
-        {
-          // should be FourthFloor instead of null
-          FloorState.floor === 5 ? <FifthFloor /> : <FourthFloor />
-        }
+      <div className="flex justify-center flex-col items-center FloorContainer"> 
+        <Guildline />
+          {
+            FloorState.floor === 5 ? <FifthFloor /> : <FourthFloor />
+          }
       </div>
     </div>
   );
 };
+
 export default FloorPlan;
