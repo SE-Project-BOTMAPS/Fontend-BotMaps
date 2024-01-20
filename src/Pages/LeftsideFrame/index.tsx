@@ -11,12 +11,14 @@ interface data {
   roomNumber: string;
   time: string;
   classDescription?: classDescription;
-  instrunctor?: string;
+  instructor?: string;
 }
-interface listData {
-  isStudyRoom: boolean;
-  data: data[];
-}
+
+// interface listData {
+//   isStudyRoom: boolean;
+//   data: data[];
+// }
+
 const studentData: data[] = [
   {
     roomNumber: "401",
@@ -50,12 +52,12 @@ const reserveData: data[] = [
   {
     roomNumber: "404",
     time: "12:30-14:00",
-    instrunctor: "Instructor name",
+    instructor: "Instructor name",
   },
   {
     roomNumber: "403",
     time: "12:30-14:00",
-    instrunctor: "Instructor name",
+    instructor: "Instructor name",
   },
 ];
 
@@ -63,7 +65,7 @@ const LeftsideFrame = () => {
   return (
     <div className="Leftside-container">
       <div>
-        <img src="/Logo/botmapsLogo.png" width={150} />
+        <img src="/Logo/botmapsLogo.png" width={150}  alt={"logo"}/>
       </div>
       <hr />
       <div>
