@@ -13,8 +13,8 @@ import {ShowEvent} from "../../../state/slices/types/sideBar.ts";
 const LeftSideFrame = () => {
   const dispatch = useAppDispatch()
   const floorState = useAppSelector(FloorSelector)
-  const commonEvent : ShowEvent[] | undefined = useAppSelector((state) => getFilteredEvents(state,false))
-  const reservedEvent : ShowEvent[] | undefined = useAppSelector((state) => getFilteredEvents(state,true))
+  const commonEvent : ShowEvent[] | undefined = useAppSelector(getFilteredEvents(false))
+  const reservedEvent : ShowEvent[] | undefined = useAppSelector(getFilteredEvents(true))
 
   useEffect(() => {
     dispatch(fetchSideBarDataAsync(floorState.floor))
