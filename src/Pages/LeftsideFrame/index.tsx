@@ -2,66 +2,25 @@ import "./leftside.css";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 import DailyList from "../../Component/list/dailyList/dailyList";
-interface classDescription {
-  courseName: string;
-  courseCode: string;
-  courseInstructor: string;
-}
-interface data {
-  roomNumber: string;
-  time: string;
-  classDescription?: classDescription;
-  instructor?: string;
-}
+import {useEffect} from "react";
 
-// interface listData {
-//   isStudyRoom: boolean;
-//   data: data[];
-// }
+// redux
+import { useAppSelector,useAppDispatch} from "../../../state/hook.ts"
+import { FloorSelector } from "../../../state/slices/floorSlice.ts"
+import { fetchSideBarDataAsync,getFilteredEvents} from "../../../state/slices/leftSideBarSlice.ts"
+import {ShowEvent} from "../../../state/slices/types/sideBar.ts";
 
-const studentData: data[] = [
-  {
-    roomNumber: "401",
-    time: "13:00-14:30",
-    classDescription: {
-      courseName: "Course-Name",
-      courseCode: "261xxx",
-      courseInstructor: "Instructor",
-    },
-  },
-  {
-    roomNumber: "501",
-    time: "11:30-12:30",
-    classDescription: {
-      courseName: "Course-Name",
-      courseCode: "261xxx",
-      courseInstructor: "Instructor",
-    },
-  },
-  {
-    roomNumber: "521",
-    time: "11:30-12:30",
-    classDescription: {
-      courseName: "Course-Name",
-      courseCode: "261xxx",
-      courseInstructor: "Instructor",
-    },
-  },
-];
-const reserveData: data[] = [
-  {
-    roomNumber: "404",
-    time: "12:30-14:00",
-    instructor: "Instructor name",
-  },
-  {
-    roomNumber: "403",
-    time: "12:30-14:00",
-    instructor: "Instructor name",
-  },
-];
+const LeftSideFrame = () => {
+  const dispatch = useAppDispatch()
+  const floorState = useAppSelector(FloorSelector)
+  const commonEvent : ShowEvent[] | undefined = useAppSelector((state) => getFilteredEvents(state,false))
+  const reservedEvent : ShowEvent[] | undefined = useAppSelector((state) => getFilteredEvents(state,true))
 
-const LeftsideFrame = () => {
+  useEffect(() => {
+    dispatch(fetchSideBarDataAsync(floorState.floor))
+  }, [dispatch, floorState.floor]);
+
+
   return (
     <div className="Leftside-container">
       <div>
@@ -82,13 +41,13 @@ const LeftsideFrame = () => {
           />
         </div>
         <div>
-          <DailyList isStudyRoom={true} data={studentData} />
+          <DailyList isStudyRoom={true} data={commonEvent}/>
         </div>
         <div>
-          <DailyList isStudyRoom={false} data={reserveData} />
+          <DailyList isStudyRoom={false} data={reservedEvent}/>
         </div>
       </div>
     </div>
   );
 };
-export default LeftsideFrame;
+export default LeftSideFrame;
