@@ -8,6 +8,7 @@ const Frame = ({ children }: { children?: ReactNode }) => {
         <LeftSideFrame />
       </div>
       <div className="Frame-Floorplan">{children}</div>
+      
     </div>
   );
 };
