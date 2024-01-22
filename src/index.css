@@ -28,20 +28,17 @@
 }
 
 
-.FloorContainer {
-  position: relative;
-  padding: 2rem;
-  /* margin-top: 5rem; */
-  scale: 0.8;
-}
 .mapContainer {
-  /* scale: 2; */
+  width: auto;
+  height: auto;
+  scale: 0.9;
   position: absolute;
-  margin-top: 10rem;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
   box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 
 
 .study,
@@ -55,7 +52,7 @@
   z-index: 1;
   text-align: center;
   margin:  auto;
-  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3); */
 }
 
 .admin{
