@@ -10,4 +10,6 @@ export interface roomProps {
     s_z_index? : string;
     r_type : string;
     r_code? : string;
+    onClick? : ()=>void;
+
 }
