@@ -22,7 +22,7 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ RoomCode, onHide }) => 
         <p>Modal Content for Room {RoomCode}</p>
       </div>
       <div className="p-d-flex p-jc-end">
-        <Button label="Close" icon="pi pi-times" onClick={onHide} />
+        <Button label="Close" onClick={onHide} className="bg-zinc-700"/>
       </div>
     </Dialog>
   );
