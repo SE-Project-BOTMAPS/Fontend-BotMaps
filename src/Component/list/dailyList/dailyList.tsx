@@ -1,11 +1,11 @@
 import "../list.css";
 
 // type
-import type { ShowEvent } from "../../../../state/slices/types/sideBar.ts";
+import type { ResponseEvent } from "../../../../state/slices/types/sideBar.ts";
 
 interface listData {
   isStudyRoom: boolean;
-  data?: ShowEvent[];
+  data?: ResponseEvent[];
 }
 const DailyList = ({ data, isStudyRoom }: listData) => {
   return (
@@ -28,21 +28,21 @@ const DailyList = ({ data, isStudyRoom }: listData) => {
           {data?.map((data, index) => (
             <li key={index} className="list-item-contianer my-3 px-6 py-5">
               <div className="flex">
-                <h6>{data.roomNumber}</h6>
-                <p className="ml-auto">{data.time}</p>
+                <h6>{data.location}</h6>
+                <p className="ml-auto">{data.start_dt}</p>
                 {isStudyRoom ? (
                   <div className="me-5">
                     <h6 className="flex ">
-                      {data.classDescription?.courseName}
-                      <span>- {data.classDescription?.courseCode}</span>
+                      {data.title}
+                      {/*<span>- {data.classDescription?.courseCode}</span>*/}
                     </h6>
-                    <p className="text-left">
-                      {data.classDescription?.courseInstructor}
-                    </p>
+                    {/*<p className="text-left">*/}
+                    {/*  {data.classDescription?.courseInstructor}*/}
+                    {/*</p>*/}
                   </div>
                 ) : (
                   <div className="instructor mr-7">
-                    <p>{data.instructor}</p>
+                    <p>{data.who}</p>
                   </div>
                 )}
               </div>

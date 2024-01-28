@@ -1,4 +1,4 @@
-import {createAsyncThunk, createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../store.ts";
 import sideBarRepository from "../../repository/leftsidebar.ts";
 import {AxiosResponse} from "axios";
@@ -32,21 +32,6 @@ export const fetchSideBarDataAsync = createAsyncThunk(
         return data;
     }
 );
-
-export const getFilteredEvents = (includeReserved: boolean) =>
-    createSelector((state: RootState) => state.SlideBar.data?.events , (events) => {
-    return events?.filter((event) => (includeReserved ? event.title.includes('จอง') : !event.title.includes('จอง')))
-            .map((event) => ({
-                roomNumber: event.location,
-                time: `${event.start_dt} - ${event.end_dt}`,
-                classDescription: {
-                    courseName: event.title,
-                    courseInstructor: event.who,
-                },
-                instructor: event.who,
-            }));
-})
-
 
 export default leftSideBarSlice.reducer;
 export const SideBarSelector = (state: RootState) => state.SlideBar.data;

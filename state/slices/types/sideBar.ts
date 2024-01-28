@@ -1,14 +1,4 @@
 
-export type Event = {
-    id: number,
-    rrule: string,
-    title: string,
-    who: string,
-    location: string,
-    notes: string,
-    start_dt: string,
-    end_dt: string,
-}
 
 export type ResponseEvent = {
     id: string,
@@ -20,22 +10,19 @@ export type ResponseEvent = {
     start_dt: string,
     end_dt: string,
 }
+type Events = {
+    reserve : ResponseEvent[]
+    study : ResponseEvent[]
+}
 
 export type Response = {
-    events: ResponseEvent[]
+    events: Events
 }
 
 export type ClassDescription = {
     courseName: string;
     courseCode?: string;
     courseInstructor: string;
-}
-
-export type ShowEvent = {
-    roomNumber: string;
-    time: string;
-    classDescription: ClassDescription;
-    instructor?: string;
 }
 
 
