@@ -1,10 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import FloorReducer from "./slices/floorSlice";
 import SlideBarReducer from "./slices/leftSideBarSlice.ts";
+import RoomModalSlice from "./slices/roomModalSlice.ts";
+
 export const store = configureStore({
     reducer: {
         Floor: FloorReducer,
-        SlideBar: SlideBarReducer
+        SlideBar: SlideBarReducer,
+        RoomModal: RoomModalSlice
     }
 });
 
