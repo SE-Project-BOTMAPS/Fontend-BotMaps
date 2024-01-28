@@ -4,7 +4,7 @@ import sideBarRepository from "../../repository/leftsidebar.ts";
 import {AxiosResponse} from "axios";
 
 // type
-import type {Response} from "./types/sideBar.ts"
+import type {Response} from "./types/sideBar.type.ts"
 
 interface leftSideBarState {
     data: Response | null

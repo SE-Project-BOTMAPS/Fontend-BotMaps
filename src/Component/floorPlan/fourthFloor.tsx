@@ -4,7 +4,7 @@ import ModalComponent from "../dialog";
 
 // redux
 import {useAppDispatch, useAppSelector} from "../../../state/hook.ts"
-import {closeRoomModal, roomModalSelector, clickedRoom} from "../../../state/slices/roomModalSlice.ts"
+import {closeRoomModal, roomModalSelector, fetchRoomDataAsync} from "../../../state/slices/roomModalSlice.ts"
 
 
 export default function FourthFloor() {
@@ -17,65 +17,65 @@ export default function FourthFloor() {
         <div className={"mapContainer"}>
             {/*    study room*/}
             <RoomComponent r_type={"study"} r_code={"413A"} s_left={"0px"} s_top={"300px"} s_width={"100px"}
-                           s_height={"100px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(clickedRoom("413A"))}/>
+                           s_height={"100px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(fetchRoomDataAsync("413A"))}/>
             <RoomComponent r_type={"study"} r_code={"402"} s_left={"500px"} s_top={"0px"} s_width={"100px"}
-                           s_height={"150px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(clickedRoom("402"))}/>
+                           s_height={"150px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(fetchRoomDataAsync("402"))}/>
             <RoomComponent r_type={"study"} r_code={"403"} s_left={"535px"} s_top={"200px"} s_width={"65px"}
-                           s_height={"50px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(clickedRoom("403"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(fetchRoomDataAsync("403"))}/>
             <RoomComponent r_type={"study"} r_code={"404"} s_left={"550px"} s_top={"250px"} s_width={"50px"}
-                           s_height={"50px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(clickedRoom("404"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(fetchRoomDataAsync("404"))}/>
             <RoomComponent r_type={"study"} r_code={"415A"} s_left={"200px"} s_top={"200px"} s_width={"100px"}
-                           s_height={"100px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(clickedRoom("415A"))}/>
+                           s_height={"100px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(fetchRoomDataAsync("415A"))}/>
             <RoomComponent r_type={"study"} r_code={"412"} s_left={"100px"} s_top={"500px"} s_width={"110px"}
-                           s_height={"100px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(clickedRoom("412"))}/>
+                           s_height={"100px"} s_bg_color={roomColor.StudyRoom} onClick={() =>dispatch(fetchRoomDataAsync("412"))}/>
 
             {/*    aj room*/}
             <RoomComponent r_type={"arjan"} r_code={"414A"} s_left={"150px"} s_top={"400px"} s_width={"50px"}
-                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom("414A"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync("414A"))}/>
             <RoomComponent r_type={"arjan"} r_code={"410"} s_left={"400px"} s_top={"460px"} s_width={"50px"}
-                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom("410"))}/>
+                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync("410"))}/>
             <RoomComponent r_type={"arjan"} r_code={"409"} s_left={"450px"} s_top={"450px"} s_width={"50px"}
-                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom("409"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync("409"))}/>
             <RoomComponent r_type={"arjan"} r_code={"405"} s_left={"480px"} s_top={"260px"} s_width={"70px"}
-                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom("405"))}/>
+                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync("405"))}/>
             <RoomComponent r_type={"arjan"} r_code={""} s_left={"0px"} s_top={"500px"} s_width={"30px"}
-                           s_height={"60px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom(""))}/>
+                           s_height={"60px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync(""))}/>
             <RoomComponent r_type={"arjan"} r_code={""} s_left={"0px"} s_top={"560px"} s_width={"55px"}
-                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom(""))}/>
+                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync(""))}/>
             <RoomComponent r_type={"arjan"} r_code={""} s_left={"55px"} s_top={"560px"} s_width={"45px"}
-                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom(""))}/>
+                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync(""))}/>
             <RoomComponent r_type={"arjan"} r_code={"402.5"} s_left={"550px"} s_top={"150px"} s_width={"50px"}
                            s_height={"50px"} s_bg_color={roomColor.ArjarnRoom}
-                           onClick={() =>dispatch(clickedRoom("402.5"))}/>
+                           onClick={() =>dispatch(fetchRoomDataAsync("402.5"))}/>
             <RoomComponent r_type={"arjan"} r_code={"448"} s_left={"100px"} s_top={"150px"} s_width={"50px"}
-                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom("448"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync("448"))}/>
             <RoomComponent r_type={"arjan"} r_code={"444"} s_left={"300px"} s_top={"100px"} s_width={"50px"}
-                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom("444"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync("444"))}/>
             <RoomComponent r_type={"arjan"} r_code={""} s_left={"30px"} s_top={"500px"} s_width={"50px"}
-                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(clickedRoom(""))}/>
+                           s_height={"40px"} s_bg_color={roomColor.ArjarnRoom} onClick={() =>dispatch(fetchRoomDataAsync(""))}/>
 
             {/* Admin */}
             <RoomComponent r_type={"admin"} r_code={"Admin"} s_left={"330px"} s_top={"200px"} s_width={"220px"}
                            s_height={"100px"} s_bg_color={roomColor.AdminRoom}
-                           onClick={() =>dispatch(clickedRoom("Admin"))}/>
+                           onClick={() =>dispatch(fetchRoomDataAsync("Admin"))}/>
 
             {/* naksuksa */}
             <RoomComponent r_type={"naksuksa"} r_code={"401"} s_left={"400px"} s_top={"0px"} s_width={"100px"}
                            s_height={"150px"} s_bg_color={roomColor.StudentRoom}
-                           onClick={() =>dispatch(clickedRoom("401"))}/>
+                           onClick={() =>dispatch(fetchRoomDataAsync("401"))}/>
             <RoomComponent r_type={"naksuksa"} r_code={"422"} s_left={"300px"} s_top={"0px"} s_width={"100px"}
                            s_height={"100px"} s_bg_color={roomColor.StudentRoom}
-                           onClick={() =>dispatch(clickedRoom("422"))}/>
+                           onClick={() =>dispatch(fetchRoomDataAsync("422"))}/>
 
             {/*    lab room*/}
             <RoomComponent r_type={"lab"} r_code={"415B"} s_left={"100px"} s_top={"200px"} s_width={"100px"}
-                           s_height={"100px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(clickedRoom("415B"))}/>
+                           s_height={"100px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(fetchRoomDataAsync("415B"))}/>
             <RoomComponent r_type={"lab"} r_code={"411B"} s_left={"200px"} s_top={"500px"} s_width={"100px"}
-                           s_height={"100px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(clickedRoom("411B"))}/>
+                           s_height={"100px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(fetchRoomDataAsync("411B"))}/>
             <RoomComponent r_type={"lab"} r_code={"411A"} s_left={"300px"} s_top={"500px"} s_width={"100px"}
-                           s_height={"100px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(clickedRoom("411A"))}/>
+                           s_height={"100px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(fetchRoomDataAsync("411A"))}/>
             <RoomComponent r_type={"lab"} r_code={"414B"} s_left={"150px"} s_top={"350px"} s_width={"50px"}
-                           s_height={"50px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(clickedRoom("414B"))}/>
+                           s_height={"50px"} s_bg_color={roomColor.LabRoom} onClick={() =>dispatch(fetchRoomDataAsync("414B"))}/>
 
             {/*    Lift*/}
             <RoomComponent r_type={"lift"} r_code={"Lift"} s_left={"200px"} s_top={"100px"} s_width={"100px"}
@@ -127,7 +127,7 @@ export default function FourthFloor() {
             <RoomComponent r_type={"stair"} r_code={""} s_left={"50px"} s_top={"50px"} s_width={"100px"}
                            s_height={"100px"} s_bg_color={"#566573"}/>
             {roomModalState.isOpen && (
-                <ModalComponent RoomCode={roomModalState.data} onHide={() => dispatch(closeRoomModal())}/>
+                <ModalComponent data={roomModalState?.data} onHide={() => dispatch(closeRoomModal())}/>
             )}
         </div>
     )

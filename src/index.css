@@ -48,7 +48,7 @@
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   /* border: 1px solid rgb(255, 255, 255); */
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   z-index: 1;
   text-align: center;
   margin:  auto;
@@ -59,7 +59,7 @@
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   /* border: 1px solid rgb(255, 255, 255); */
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   z-index: 0;
   text-align: center;
   margin: 0 auto;
@@ -78,7 +78,7 @@
 }
 
 .none{
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   z-index: 1;
 }
 
@@ -86,7 +86,30 @@
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   z-index: 0;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
+}
+
+@keyframes rgbEffect {
+  0% {
+    border: 5px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  25% {
+    border: 5px solid rgba(255, 255, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+  }
+  50% {
+    border: 5px solid rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  }
+  75% {
+    border: 5px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    border: 5px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
 }
 
 .study:hover,
@@ -94,8 +117,12 @@
 .admin:hover,
 .naksuksa:hover,
 .lab:hover {
-  transform: scale(2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  opacity: 0.9;
-  z-index: 2; /* Bring the hovered div to the front */
+  cursor: pointer;
+  animation: rgbEffect 1s linear infinite; /* Adjust the duration for a complete rotation */
 }
+
+
+
+
+
+

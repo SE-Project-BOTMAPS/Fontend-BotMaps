@@ -1,7 +1,7 @@
 import "../list.css";
 
 // type
-import type { ResponseEvent } from "../../../../state/slices/types/sideBar.ts";
+import type { ResponseEvent } from "../../../../state/slices/types/sideBar.type.ts";
 
 interface listData {
   isStudyRoom: boolean;

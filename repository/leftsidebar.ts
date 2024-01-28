@@ -1,6 +1,6 @@
 import repository from "./index"
 import {AxiosResponse} from "axios";
-import {Response} from "../state/slices/types/sideBar.ts";
+import {Response} from "../state/slices/types/sideBar.type.ts";
 
 const basePath = import.meta.env.VITE_BASE_URL
 

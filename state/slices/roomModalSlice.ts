@@ -1,14 +1,19 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {RootState} from "../store";
+import repository from "../../repository/room.ts";
+
+// type
+import type {Response} from "./types/room.type.ts";
+import {AxiosResponse} from "axios";
 
 interface RoomModalState {
     isOpen: boolean
-    data: string
+    data: Response | null
 }
 
 const initialState: RoomModalState = {
     isOpen: false,
-    data: ''
+    data: null
 }
 
 export const roomModalSlice = createSlice({
@@ -18,13 +23,24 @@ export const roomModalSlice = createSlice({
         closeRoomModal: (state: RoomModalState) => {
             state.isOpen = false
         },
-        clickedRoom: (state: RoomModalState, payload: PayloadAction<string>) => {
-            state.data = payload.payload
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchRoomDataAsync.fulfilled, (state, action) => {
             state.isOpen = true
-        }
+            state.data = action.payload
+        })
     }
 })
 
-export const {closeRoomModal, clickedRoom} = roomModalSlice.actions
+export const fetchRoomDataAsync = createAsyncThunk(
+    'roomModal/getRoomData',
+    async (roomCode: string): Promise<Response> => {
+        const {data}: AxiosResponse<Response> = await repository.getRoomBYCode(roomCode);
+        console.log(data)
+        return data;
+    }
+);
+
+export const {closeRoomModal} = roomModalSlice.actions
 export default roomModalSlice.reducer
 export const roomModalSelector = (state: RootState ) => state.RoomModal
