@@ -1,8 +1,21 @@
-.Frame-Leftside {
-  flex: 0 0 40%;
-  max-width: 40%;
+/* Add these styles to Frame.css */
+.splitter-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.Frame-Floorplan {
-  flex: 0 0 60%;
-  max-width: 60%;
+
+.splitter-panel-left {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
 }
+
+.splitter-panel-right {
+  flex: 1;
+  overflow: auto;
+  
+}
+
+/* Add other styles as needed */
