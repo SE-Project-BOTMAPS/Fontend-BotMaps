@@ -10,7 +10,8 @@ export type ResponseEvent = {
     start_dt: string,
     end_dt: string,
 }
-type Events = {
+
+export type Events = {
     reserve : ResponseEvent[]
     study : ResponseEvent[]
 }

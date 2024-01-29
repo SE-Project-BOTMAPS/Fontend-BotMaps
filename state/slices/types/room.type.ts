@@ -19,6 +19,18 @@ export type ResponseRoomEvent = {
     }
 }
 
+type ResponseDay = {
+    mon : ResponseRoomEvent[],
+    tue : ResponseRoomEvent[],
+    wed : ResponseRoomEvent[],
+    thu : ResponseRoomEvent[],
+    fri : ResponseRoomEvent[],
+    sat : ResponseRoomEvent[],
+    sun : ResponseRoomEvent[]
+}
+
+export type Eventkey = keyof ResponseDay;
+
 export type Response = {
-    events: ResponseRoomEvent[] | []
+    events: ResponseDay
 }

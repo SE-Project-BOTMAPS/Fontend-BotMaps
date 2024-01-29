@@ -38,11 +38,8 @@ const LeftSideFrame = () => {
                         sx={{width: "100%"}}
                     />
                 </div>
-                <div>
-                    <DailyList isStudyRoom={true} data={sideBarState?.events.study}/>
-                </div>
-                <div>
-                    <DailyList isStudyRoom={false} data={sideBarState?.events.reserve}/>
+                <div className="mt-5">
+                    <DailyList data={sideBarState?.events}/>
                 </div>
             </div>
         </div>
