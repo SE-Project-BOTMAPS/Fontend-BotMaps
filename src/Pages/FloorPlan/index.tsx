@@ -10,6 +10,7 @@ import FourthFloor from "../../Component/floorPlan/fourthFloor.tsx";
 import FifthFloor from "../../Component/floorPlan/fifthFloor.tsx";
 import Guildline from "../../Component/floorPlan/guildline.tsx";
 
+
 const FloorPlan = () => {
   const FloorState = useAppSelector(FloorSelector);
   const dispatch = useAppDispatch();
@@ -36,9 +37,9 @@ const FloorPlan = () => {
           </button>
         </div>
         <Guildline />
-        <div className="mx-auto">
-          {FloorState.floor === 5 ? <FifthFloor /> : <FourthFloor />}
-        </div>
+      </div>
+      <div className="mx-auto">
+        {FloorState.floor === 5 ? <FifthFloor /> : <FourthFloor />}
       </div>
     </div>
   );
