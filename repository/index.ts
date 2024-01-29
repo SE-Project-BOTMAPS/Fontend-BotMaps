@@ -18,7 +18,7 @@ axiosCustom.interceptors.response.use(
             toastRef.current?.show({
                 severity: 'error',
                 summary: 'room not found',
-                detail: 'This room does not exist on our database, might be professor\'s office',
+                detail: 'This room does not exist on our database.',
                 life: 2000
             });
         }
