@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import "./Frame.css";
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import LeftSideFrame from './../Pages/LeftsideFrame/index';
