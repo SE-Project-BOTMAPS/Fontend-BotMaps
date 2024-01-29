@@ -2,7 +2,7 @@ import React from "react";
 import {Dialog} from "primereact/dialog";
 import {Button} from "primereact/button";
 // type
-import {Eventkey, Response} from "../../state/slices/types/room.type.ts";
+import {EventKey, Response} from "../../state/slices/types/room.type.ts";
 import {DaySchedule} from "./list/daySchedule.tsx";
 
 // redux
@@ -17,13 +17,13 @@ interface ModalComponentProps {
 const ModalComponent: React.FC<ModalComponentProps> = ({data, onHide}) => {
     const roomModalState = useAppSelector(roomModalSelector);
     const days = [
-        {name: "Monday", eventKey: "mon" as Eventkey},
-        {name: "Tuesday", eventKey: "tue" as Eventkey},
-        {name: "Wednesday", eventKey: "wed" as Eventkey},
-        {name: "Thursday", eventKey: "thu" as Eventkey},
-        {name: "Friday", eventKey: "fri" as Eventkey},
-        {name: "Saturday", eventKey: "sat" as Eventkey},
-        {name: "Sunday", eventKey: "sun" as Eventkey}
+        {name: "Monday", eventKey: "mon" as EventKey},
+        {name: "Tuesday", eventKey: "tue" as EventKey},
+        {name: "Wednesday", eventKey: "wed" as EventKey},
+        {name: "Thursday", eventKey: "thu" as EventKey},
+        {name: "Friday", eventKey: "fri" as EventKey},
+        {name: "Saturday", eventKey: "sat" as EventKey},
+        {name: "Sunday", eventKey: "sun" as EventKey}
     ];
 
     const allDaysEmpty = days.every(day => data?.events && data.events[day.eventKey] && data.events[day.eventKey].length === 0);

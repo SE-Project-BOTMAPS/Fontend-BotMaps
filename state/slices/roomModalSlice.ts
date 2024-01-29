@@ -1,6 +1,7 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "../store";
 import repository from "../../repository/room.ts";
+import {toastRef} from "../../repository";
 
 // type
 import type {Response} from "./types/room.type.ts";
@@ -25,12 +26,13 @@ export const roomModalSlice = createSlice({
         closeRoomModal: (state: RoomModalState) => {
             state.isOpen = false
         },
-        changeRoomCode: (state: RoomModalState, action : PayloadAction<string>) => {
+        changeRoomCode: (state: RoomModalState, action: PayloadAction<string>) => {
             state.roomCode = action.payload
         }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchRoomDataAsync.fulfilled, (state, action) => {
+            if(action.payload === null) return
             state.isOpen = true
             state.data = action.payload
         })
@@ -39,12 +41,22 @@ export const roomModalSlice = createSlice({
 
 export const fetchRoomDataAsync = createAsyncThunk(
     'roomModal/getRoomData',
-    async (roomCode: string): Promise<Response> => {
+    async (roomCode: string): Promise<Response | null> => {
         const {data}: AxiosResponse<Response> = await repository.getRoomBYCode(roomCode);
-        return data;
+        if (data.officeOf.length !== 0) {
+            const officeOf = data.officeOf.map((office) => office.professor).join(', ')
+            toastRef.current?.show({
+                severity: 'info',
+                summary: 'office room of',
+                detail: `This room is office room of ${officeOf}`,
+                life: 2000
+            })
+            return null
+        }
+        return data
     }
 );
 
-export const {closeRoomModal,changeRoomCode} = roomModalSlice.actions
+export const {closeRoomModal, changeRoomCode} = roomModalSlice.actions
 export default roomModalSlice.reducer
-export const roomModalSelector = (state: RootState ) => state.RoomModal
+export const roomModalSelector = (state: RootState) => state.RoomModal

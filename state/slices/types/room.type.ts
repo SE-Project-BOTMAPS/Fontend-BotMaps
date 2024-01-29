@@ -29,8 +29,20 @@ type ResponseDay = {
     sun : ResponseRoomEvent[]
 }
 
-export type Eventkey = keyof ResponseDay;
+export type office = {
+    id : number,
+    professor : string,
+    location_id : number,
+    Location : {
+        id : number,
+        location : string,
+        detail : string
+    }
+}
+
+export type EventKey = keyof ResponseDay;
 
 export type Response = {
     events: ResponseDay
+    officeOf : office[]
 }
