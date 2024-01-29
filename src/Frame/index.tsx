@@ -1,15 +1,21 @@
 import { ReactNode } from "react";
-import LeftSideFrame from "../Pages/LeftsideFrame";
 import "./Frame.css";
+import { Splitter, SplitterPanel } from 'primereact/splitter';
+import LeftSideFrame from './../Pages/LeftsideFrame/index';
+
 const Frame = ({ children }: { children?: ReactNode }) => {
   return (
-    <div className="flex">
-      <div className="Frame-Leftside">
-        <LeftSideFrame />
-      </div>
-      <div className="Frame-Floorplan">{children}</div>
-      
+    <div className="splitter-container ">
+      <Splitter >
+        <SplitterPanel className="splitter-panel-left " size={75}>
+          <LeftSideFrame />
+        </SplitterPanel>
+        <SplitterPanel className="splitter-panel-right" minSize={35}>
+          {children}
+        </SplitterPanel>
+      </Splitter>
     </div>
   );
 };
+
 export default Frame;
