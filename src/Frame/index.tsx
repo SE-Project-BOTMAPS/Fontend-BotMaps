@@ -5,12 +5,12 @@ import LeftSideFrame from './../Pages/LeftsideFrame/index';
 
 const Frame = ({ children }: { children?: ReactNode }) => {
   return (
-    <div className="splitter-container">
-      <Splitter>
-        <SplitterPanel className="splitter-panel-left" size={75}>
+    <div className="splitter-container ">
+      <Splitter >
+        <SplitterPanel className="splitter-panel-left " size={75}>
           <LeftSideFrame />
         </SplitterPanel>
-        <SplitterPanel className="splitter-panel-right">
+        <SplitterPanel className="splitter-panel-right" minSize={35}>
           {children}
         </SplitterPanel>
       </Splitter>
