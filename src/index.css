@@ -32,9 +32,7 @@
   width: auto;
   height: auto;
   scale: 0.9;
-  position: absolute;
-  right: 50%;
-  transform: translateX(-50%);
+  position: relative;
   margin-top: 1rem;
   box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5);
 }
