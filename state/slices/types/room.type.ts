@@ -30,14 +30,8 @@ type ResponseDay = {
 }
 
 export type office = {
-    id : number,
-    professor : string,
-    location_id : number,
-    Location : {
-        id : number,
-        location : string,
-        detail : string
-    }
+    data_who: string
+    full_name : string
 }
 
 export type EventKey = keyof ResponseDay;
