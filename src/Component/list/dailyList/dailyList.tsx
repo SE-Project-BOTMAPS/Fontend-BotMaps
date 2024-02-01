@@ -21,7 +21,7 @@ const DailyList: React.FC<listData> = ({data}) => {
                 <Accordion multiple activeIndex={[0,1]}>
                     <AccordionTab header="Study room">
                         <DataTable value={data?.study} tableStyle={{minWidth: '30rem'}} rowHover>
-                            <Column field="title" header="Courses" sortable></Column>
+                            <Column field="location" header="Room" sortable></Column>
                             <Column header="Range of time"
                                     body={(rowData => {
                                         return (
@@ -31,12 +31,13 @@ const DailyList: React.FC<listData> = ({data}) => {
                                         )
                                     })}
                             ></Column>
+                            <Column field="title" header="Courses" sortable></Column>
                             <Column field="who" header="Professor" sortable></Column>
                         </DataTable>
                     </AccordionTab>
                     <AccordionTab header="Reservation Room">
                         <DataTable value={data?.reserve} tableStyle={{minWidth: '30rem'}} rowHover>
-                            <Column field="title" header="Courses" sortable></Column>
+                            <Column field="location" header="Room" sortable></Column>
                             <Column header="Range of time"
                                     body={(rowData => {
                                         return (
@@ -46,6 +47,7 @@ const DailyList: React.FC<listData> = ({data}) => {
                                         )
                                     })}
                             ></Column>
+                            <Column field="title" header="Courses" sortable></Column>
                             <Column field="who" header="Professor" sortable></Column>
                         </DataTable>
                     </AccordionTab>
