@@ -44,7 +44,7 @@ export const fetchRoomDataAsync = createAsyncThunk(
     async (roomCode: string): Promise<Response | null> => {
         const {data}: AxiosResponse<Response> = await repository.getRoomBYCode(roomCode);
         if (data.officeOf.length !== 0) {
-            const officeOf = data.officeOf.map((office) => office.professor).join(', ')
+            const officeOf = data.officeOf.map((office) => office.data_who).join(', ')
             toastRef.current?.show({
                 severity: 'info',
                 summary: 'office room of',

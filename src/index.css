@@ -21,6 +21,7 @@
   }
 
   body {
+    overflow-y: hidden;
     margin: 0;
     background: #fafafc;
   }
@@ -32,8 +33,6 @@
     margin: 0.5rem 0;
   }
 }
-
-
 .mapContainer {
   width: auto;
   height: auto;
