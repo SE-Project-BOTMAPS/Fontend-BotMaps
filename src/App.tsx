@@ -6,7 +6,7 @@ function App() {
   return (
     <>
         <Toast ref={toastRef} position="bottom-right"/>
-      <MainPage />
+      <MainPage/>
     </>
   );
 }
