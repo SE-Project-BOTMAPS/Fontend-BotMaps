@@ -2,12 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import FloorReducer from "./slices/floorSlice";
 import SlideBarReducer from "./slices/leftSideBarSlice.ts";
 import RoomModalSlice from "./slices/roomModalSlice.ts";
+import SearchSlice from "./slices/searchSlice.ts";
 
 export const store = configureStore({
     reducer: {
         Floor: FloorReducer,
         SlideBar: SlideBarReducer,
-        RoomModal: RoomModalSlice
+        RoomModal: RoomModalSlice,
+        Search: SearchSlice
     }
 });
 
