@@ -36,7 +36,7 @@
 .mapContainer {
   width: auto;
   height: auto;
-  scale: 0.8;
+  scale: 0.9;
   position: relative;
   margin-top: 1rem;
   box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5);
@@ -49,11 +49,11 @@
   position: absolute;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   /* border: 1px solid rgb(255, 255, 255); */
-  /*border: 1px solid black;*/
+  border: 1px solid black;
   z-index: 1;
   text-align: center;
   margin: auto;
-  /* box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .admin {
@@ -124,6 +124,34 @@
   }
 }
 
+@keyframes bwEffect {
+  0% {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  25% {
+    border: 5px solid rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+  }
+
+  50% {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  75% {
+    border: 5px solid rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+  }
+
+  100% {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
 .study:hover,
 .arjan:hover,
 .admin:hover,
@@ -132,4 +160,19 @@
   cursor: pointer;
   animation: rgbEffect 1s linear infinite;
   /* Adjust the duration for a complete rotation */
+
+  /* Scale to 2x on hover */
+  transform: scale(1.4);
+  z-index: 5;
 }
+
+/* @keyframes rgbEffect {
+  0% {
+
+    filter: hue-rotate(0deg);
+  }
+  100% {
+
+    filter: hue-rotate(360deg);
+  }
+} */

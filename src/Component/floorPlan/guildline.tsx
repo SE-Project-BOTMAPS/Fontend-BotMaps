@@ -19,7 +19,7 @@ const colorGuideline: ColorGuideline = generateColorGuideline(roomcolor);
 
 const Guildline: React.FC = () => {
   return (
-    <div className="grid grid-cols-5 mx-auto pt-4">
+    <div className="grid grid-cols-5 mx-auto pt-4 ml-4">
       {Object.entries(colorGuideline).map(([name, color]) => (
         <div key={name} className="flex m-1">
           <div style={{ backgroundColor: color, width: '15px', height: '15px', borderRadius: '50%' ,margin:'auto 0'}}></div>

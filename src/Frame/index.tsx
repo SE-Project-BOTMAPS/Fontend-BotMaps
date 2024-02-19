@@ -7,10 +7,10 @@ const Frame = ({ children }: { children?: ReactNode }) => {
   return (
     <div className="splitter-container ">
       <Splitter >
-        <SplitterPanel className="splitter-panel-left " size={75} minSize={35}>
+        <SplitterPanel className="splitter-panel-left " size={65} minSize={35}>
           <LeftSideFrame />
         </SplitterPanel>
-        <SplitterPanel className="splitter-panel-right" minSize={35}>
+        <SplitterPanel className="splitter-panel-right" minSize={20}>
           {children}
         </SplitterPanel>
       </Splitter>
