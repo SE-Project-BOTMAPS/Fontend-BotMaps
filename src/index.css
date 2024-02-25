@@ -158,7 +158,7 @@
 .naksuksa:hover,
 .lab:hover {
   cursor: pointer;
-  animation: rgbEffect 1s linear infinite;
+  animation: rgbEffect 10s linear infinite;
   /* Adjust the duration for a complete rotation */
 
   /* Scale to 2x on hover */
