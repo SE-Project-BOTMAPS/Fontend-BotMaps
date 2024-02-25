@@ -11,12 +11,14 @@ interface RoomModalState {
   roomCode: string;
   isOpen: boolean;
   data: Response | null;
+  isVacant: boolean | null;
 }
 
 const initialState: RoomModalState = {
   roomCode: "",
   isOpen: false,
   data: null,
+  isVacant: null,
 };
 
 export const roomModalSlice = createSlice({
@@ -35,6 +37,9 @@ export const roomModalSlice = createSlice({
       if (action.payload === null) return;
       state.isOpen = true;
       state.data = action.payload;
+    });
+    builder.addCase(isVacantAsync.fulfilled, (state, action) => {
+      state.isVacant = action.payload;
     });
   },
 });
@@ -61,7 +66,15 @@ export const fetchRoomDataAsync = createAsyncThunk(
     }
     return data;
   }
-);
+)
+
+export const isVacantAsync = createAsyncThunk(
+    "roomModal/isVacant",
+    async (roomCode: string): Promise<boolean> => {
+        const { data } = await repository.isVacant(roomCode);
+        return data.isVacant;
+    }
+)
 
 export const { closeRoomModal, changeRoomCode } = roomModalSlice.actions;
 export default roomModalSlice.reducer;

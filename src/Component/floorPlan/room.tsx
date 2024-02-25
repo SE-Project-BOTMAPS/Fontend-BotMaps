@@ -1,12 +1,17 @@
 import { roomProps } from "./interface/room.ts";
 import {useAppDispatch} from "../../../state/hook.ts";
-import {fetchRoomDataAsync, changeRoomCode} from "../../../state/slices/roomModalSlice.ts"
+import {fetchRoomDataAsync, changeRoomCode, isVacantAsync} from "../../../state/slices/roomModalSlice.ts"
 
 export default function Room(props: roomProps) {
     const dispatch = useAppDispatch();
     const handleClick = () => {
-        dispatch(fetchRoomDataAsync(props.r_code ?? ""));
-        dispatch(changeRoomCode(props.r_code ?? ""));
+        dispatch(fetchRoomDataAsync(props.r_code ?? ""))
+            .then((res) =>{
+                if (res.payload === null) return;
+                dispatch(isVacantAsync(props.r_code ?? ""));
+                dispatch(changeRoomCode(props.r_code ?? ""));
+
+            })
     }
   return (
     <div
