@@ -41,3 +41,7 @@ export type Response = {
   events: ResponseDay;
   officeOf: office[];
 };
+
+export type isVacant = {
+  isVacant: boolean;
+}

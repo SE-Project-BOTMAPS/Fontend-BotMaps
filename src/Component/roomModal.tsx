@@ -1,6 +1,8 @@
 import React from "react";
 import {Dialog} from "primereact/dialog";
-import {Button} from "primereact/button";
+import {Badge} from 'primereact/badge';
+import {Divider} from 'primereact/divider';
+
 // type
 import {EventKey, Response} from "../../state/slices/types/room.type.ts";
 import {DaySchedule} from "./list/daySchedule.tsx";
@@ -30,26 +32,44 @@ const ModalComponent: React.FC<ModalComponentProps> = ({data, onHide}) => {
 
     return (
         <Dialog
-            header={`Room ${roomModalState.roomCode} Details`}
+            header={
+                <>
+                    <div className="flex flex-row justify-center items-center gap-2.5">
+                        <h2 className="text-xl font-bold">Room Details: {roomModalState.roomCode}</h2>
+                        <Divider layout="vertical"/>
+                        {
+                            <div>
+                                {
+                                    roomModalState?.isVacant ? (
+                                        <Badge value="Vacant" severity="success" size={"large"}/>
+                                    ) : (
+                                        <Badge value="Occupied" severity="danger" size={"large"}/>
+                                    )
+                                }
+                            </div>
+                        }
+                    </div>
+                </>
+            }
             visible={true}
             style={{width: "50vw"}}
             closeOnEscape={true}
             dismissableMask={true}
             onHide={onHide}
             draggable={false}
+            contentClassName={"p-4"}
         >
             {allDaysEmpty ? (
                 <p>No events available for any day.</p>
             ) : (
-                days
-                    .filter(day => data?.events && data.events[day.eventKey] && data.events[day.eventKey]?.length > 0)
-                    .map(day => (
-                        <DaySchedule key={day.eventKey} day={day.name} data={data?.events[day.eventKey]}/>
-                    ))
+                <div>
+                    {days
+                        .filter(day => data?.events && data.events[day.eventKey] && data.events[day.eventKey]?.length > 0)
+                        .map(day => (
+                            <DaySchedule key={day.eventKey} day={day.name} data={data?.events[day.eventKey]}/>
+                        ))}
+                </div>
             )}
-            <div className="flex justify-end mt-3">
-                <Button label="Close" onClick={onHide} className="bg-zinc-700"/>
-            </div>
         </Dialog>
     );
 };
