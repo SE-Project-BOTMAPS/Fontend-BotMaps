@@ -11,6 +11,8 @@ import {DaySchedule} from "./list/daySchedule.tsx";
 import {useAppSelector} from "../../state/hook.ts";
 import {roomModalSelector} from "../../state/slices/roomModalSlice.ts"
 
+import CurTime from "./Current Time/CurTime.tsx";
+
 interface ModalComponentProps {
     data: Response | null;
     onHide: () => void;
@@ -42,12 +44,15 @@ const ModalComponent: React.FC<ModalComponentProps> = ({data, onHide}) => {
                                 {
                                     roomModalState?.isVacant ? (
                                         <Badge value="Vacant" severity="success" size={"large"}/>
-                                    ) : (
-                                        <Badge value="Occupied" severity="danger" size={"large"}/>
-                                    )
-                                }
+                                        ) : (
+                                            <Badge value="Occupied" severity="danger" size={"large"}/>
+                                            )
+                                        }
                             </div>
+                            
                         }
+                        <Divider layout="vertical"/>
+                        <CurTime/>
                     </div>
                 </>
             }
