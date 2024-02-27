@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import repository from "../../repository/room.ts";
 import { toastRef } from "../../repository";
+import {isVacant} from "./types/room.type.ts";
 
 // type
 import type { Response } from "./types/room.type.ts";
@@ -11,7 +12,7 @@ interface RoomModalState {
   roomCode: string;
   isOpen: boolean;
   data: Response | null;
-  isVacant: boolean | null;
+  isVacant: isVacant | null;
 }
 
 const initialState: RoomModalState = {
@@ -70,9 +71,9 @@ export const fetchRoomDataAsync = createAsyncThunk(
 
 export const isVacantAsync = createAsyncThunk(
     "roomModal/isVacant",
-    async (roomCode: string): Promise<boolean> => {
-        const { data } = await repository.isVacant(roomCode);
-        return data.isVacant;
+    async (roomCode: string): Promise<isVacant> => {
+        const { data } : AxiosResponse<isVacant> = await repository.isVacant(roomCode);
+        return data
     }
 )
 

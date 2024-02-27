@@ -44,4 +44,8 @@ export type Response = {
 
 export type isVacant = {
   isVacant: boolean;
+  occupyingEvent: {
+    "title": string
+    "who": string
+  }
 }
