@@ -34,20 +34,27 @@ const ModalComponent: React.FC<ModalComponentProps> = ({data, onHide}) => {
         <Dialog
             header={
                 <>
-                    <div className="flex flex-row justify-center items-center gap-2.5">
-                        <h2 className="text-xl font-bold">Room Details: {roomModalState.roomCode}</h2>
-                        <Divider layout="vertical"/>
-                        {
+                    <div className="flex flex-col justify-center items-center">
+                        <div className="flex flex-row justify-center items-center gap-2.5">
+                            <h2 className="text-xl font-bold">Room Details: {roomModalState.roomCode}</h2>
+                            <Divider layout="vertical"/>
                             <div>
                                 {
-                                    roomModalState?.isVacant ? (
+                                    roomModalState.isVacant?.isVacant ? (
                                         <Badge value="Vacant" severity="success" size={"large"}/>
                                     ) : (
-                                        <Badge value="Occupied" severity="danger" size={"large"}/>
+                                        <div>
+                                            <Badge value="Occupied" severity="danger" size={"large"}/>
+                                            <div className="flex gap-1 mt-1">
+                                                <Badge value={roomModalState.isVacant?.occupyingEvent.title} severity="info"
+                                                       size={"normal"}/>
+                                                <Badge value={roomModalState.isVacant?.occupyingEvent.who} severity="success" size={"normal"}/>
+                                            </div>
+                                        </div>
                                     )
                                 }
                             </div>
-                        }
+                        </div>
                     </div>
                 </>
             }
