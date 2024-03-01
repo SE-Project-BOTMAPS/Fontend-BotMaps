@@ -33,7 +33,8 @@ const LeftSideFrame = () => {
 
   return (
     <div className="Leftside-container">
-      <div>
+      <div className="hover:cursor-pointer"
+           onClick={() => dispatch(fetchSideBarDataAsync(floorState.floor))}>
         <img src="/Logo/botmapsLogo.png" width={150} alt={"logo"} />
       </div>
       <hr />
@@ -43,10 +44,10 @@ const LeftSideFrame = () => {
             <TextField
               size="small"
               id="search"
-              label="search"
+              label="Search"
               variant="outlined"
               sx={{ width: "100%" }}
-              helperText="Search from Professor name (ENG, TH) or Location or Course number"
+              helperText="Search from Professor name (ENG, TH) or Location or Course number and Course name"
               InputProps={{
                 startAdornment: <SearchIcon />,
               }}
