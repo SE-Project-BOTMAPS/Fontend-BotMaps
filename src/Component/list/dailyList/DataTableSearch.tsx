@@ -11,7 +11,7 @@ interface AccordionTabDailyProp {
 export const DataTableSearch: React.FC<AccordionTabDailyProp> = ({data}) => {
     return (
         <DataTable value={data} tableStyle={{minWidth: '30rem'}} rowHover>
-            <Column field="Location.location" header="Room" sortable></Column>
+            <Column field="Location.location" header="Room"></Column>
             <Column header="Range of time"
                     body={(rowData => {
                         return (
@@ -22,7 +22,11 @@ export const DataTableSearch: React.FC<AccordionTabDailyProp> = ({data}) => {
                     })}
             ></Column>
             <Column field="day" header="Day" sortable></Column>
-            <Column field="title" header="Courses" sortable></Column>
+            <Column field="course_id" header="Courses" sortable
+            body={(rowData => {
+                return rowData.course_id !== 0 ? rowData.course_id : rowData.title;
+            })}>
+            </Column>
             <Column field="Professor.data_who" header="Professor" sortable></Column>
         </DataTable>
     )

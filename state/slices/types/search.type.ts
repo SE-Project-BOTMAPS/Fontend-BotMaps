@@ -2,7 +2,7 @@
 export type SearchObject = {
     id: string,
     title: string,
-    code: string,
+    course_id: number,
     day: string,
     start_time: string,
     end_time: string,

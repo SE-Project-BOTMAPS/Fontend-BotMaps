@@ -25,7 +25,7 @@ const FloorPlan = () => {
               } px-7 py-3 `}
               onClick={() => dispatch(changeFloor(4))}
             >
-              <p>4th floor</p>
+              <p>4<sup>th</sup> Floor</p>
             </button>
             <button
               className={`select-button floor5 ${
@@ -33,7 +33,7 @@ const FloorPlan = () => {
               } px-7 py-3 `}
               onClick={() => dispatch(changeFloor(5))}
             >
-              <p>5th floor</p>
+              <p>5<sup>th</sup> Floor</p>
             </button>
           </div>
           <div className="my-8">
