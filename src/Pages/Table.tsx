@@ -4,7 +4,6 @@ import DailyList from "../Component/list/dailyList/dailyList";
 
 // redux
 import { useAppDispatch, useAppSelector } from "../../state/hook.ts";
-import { FloorSelector } from "../../state/slices/floorSlice.ts";
 import {
   fetchSideBarDataAsync,
   SideBarSelector,
@@ -14,7 +13,6 @@ const Table = () => {
   const { floor } = useParams();
 
   const dispatch = useAppDispatch();
-  const floorState = useAppSelector(FloorSelector);
   const sideBarState = useAppSelector(SideBarSelector);
 
   useEffect(() => {
