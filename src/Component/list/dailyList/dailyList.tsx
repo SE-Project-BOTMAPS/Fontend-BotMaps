@@ -15,9 +15,10 @@ import {FloorSelector} from "../../../../state/slices/floorSlice.ts"
 
 interface listData {
     data?: Events;
+    floor? : number;
 }
 
-const DailyList: React.FC<listData> = ({data}) => {
+const DailyList: React.FC<listData> = ({data, floor}) => {
     const [currentDay, setCurrentDay] = React.useState("");
     const FloorState = useAppSelector(FloorSelector);
 
@@ -40,7 +41,7 @@ const DailyList: React.FC<listData> = ({data}) => {
             <div>
                 <div className="border-solid border-0 border-l-8 border-black pl-2">
                 <h3 className="mb-0 text-xl font-bold text-gray-900">Occupancy Status for {currentDay}:
-                    Floor {FloorState.floor}</h3>
+                    Floor {floor == null ? FloorState.floor : floor}</h3>
                 <p className="mt-0 text-sm text-gray-600">Please note that the current usage status is subject to
                     change.</p>
                 </div>
