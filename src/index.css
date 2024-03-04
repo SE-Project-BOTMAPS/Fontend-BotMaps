@@ -141,8 +141,8 @@
   }
 
   75% {
-    border: 5px solid rgba(128, 128, 128, 0.5);
-    box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
 
   100% {
@@ -158,7 +158,7 @@
 .naksuksa:hover,
 .lab:hover {
   cursor: pointer;
-  animation: rgbEffect 10s linear infinite;
+  animation: bwEffect 2s linear infinite;
   /* Adjust the duration for a complete rotation */
 
   /* Scale to 2x on hover */

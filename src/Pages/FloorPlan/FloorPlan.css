@@ -42,7 +42,7 @@
   color: #ffffff;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
   border: 2px solid #ffffff;
-  animation: rgbEffect 1s linear infinite;
+  animation: bwEffect 2s linear infinite;
   /* Adjust the duration for a complete rotation */
   z-index: 5;
 }
@@ -71,6 +71,33 @@
   100% {
     border: 5px solid rgba(255, 0, 0, 0.5);
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+}
+
+@keyframes bwEffect {
+  0% {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  25% {
+    border: 5px solid rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+  }
+
+  50% {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  75% {
+    border: 5px solid rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+  }
+
+  100% {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
 }
 
