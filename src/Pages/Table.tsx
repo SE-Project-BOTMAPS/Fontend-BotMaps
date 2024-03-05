@@ -22,9 +22,9 @@ const Table = () => {
   return (
     <div>
       <div
-    className="flex justify-center py-4 "
+    className="flex justify-center py-10 "
       >
-        <img src="/Logo/botmapsLogo.png" width={300} alt={"logo"} />
+        <img src="/Logo/botmapsLogo.png" width={350} alt={"logo"} />
       </div>
       <hr />
       <div>

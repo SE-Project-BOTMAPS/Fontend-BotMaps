@@ -10,7 +10,7 @@ interface AccordionTabDailyProp {
 
 export const DataTableSearch: React.FC<AccordionTabDailyProp> = ({data}) => {
     return (
-        <DataTable value={data} tableStyle={{minWidth: '30rem'}} rowHover>
+        <DataTable value={data} tableStyle={{minWidth: '30rem'}} rowHover >
             <Column field="Location.location" header="Room"></Column>
             <Column header="Range of time"
                     body={(rowData => {
