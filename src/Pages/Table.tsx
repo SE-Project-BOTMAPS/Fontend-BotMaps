@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import DailyList from "../Component/list/dailyList/dailyList";
+import DailyList from "../Component/list/dailyList/dailyListforSignage";
 
 // redux
 import { useAppDispatch, useAppSelector } from "../../state/hook.ts";
@@ -22,13 +22,13 @@ const Table = () => {
   return (
     <div>
       <div
-    className="flex justify-center py-8 "
+    className="flex justify-center py-4 "
       >
-        <img src="/Logo/botmapsLogo.png" width={450} alt={"logo"} />
+        <img src="/Logo/botmapsLogo.png" width={300} alt={"logo"} />
       </div>
       <hr />
       <div>
-        <div className="mt-5 px-8 py-2">
+        <div className="mt-5 px-8 ">
           <DailyList data={sideBarState?.events} floor={Number(floor)}/>
         </div>
       </div>
