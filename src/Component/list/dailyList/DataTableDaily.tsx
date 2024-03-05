@@ -6,11 +6,11 @@ import { Column } from "primereact/column";
 interface AccordionTabDailyProp {
   data?: ResponseEvent[];
   fontSize?: string;
-  signageRowHeight?: string;
+  
 }
 
 
-export const DataTableDaily: React.FC<AccordionTabDailyProp> = ({ data, fontSize, signageRowHeight }) => {
+export const DataTableDaily: React.FC<AccordionTabDailyProp> = ({ data, fontSize }) => {
   const getCurrentTime = (): string => {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, "0");
