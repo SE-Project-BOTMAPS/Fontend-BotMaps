@@ -28,7 +28,7 @@ export default function FifthFloor() {
         s_top={"300px"}
         s_width={"100px"}
         s_height={"200px"}
-        s_bg_color={roomColor.StudyRoom}
+        s_bg_color={roomColor.Study}
       />
       <RoomComponent
         r_type={"study"}
@@ -37,7 +37,7 @@ export default function FifthFloor() {
         s_top={"500px"}
         s_width={"200px"}
         s_height={"100px"}
-        s_bg_color={roomColor.StudyRoom}
+        s_bg_color={roomColor.Study}
       />
       <RoomComponent
         r_type={"study"}
@@ -46,7 +46,7 @@ export default function FifthFloor() {
         s_top={"200px"}
         s_width={"200px"}
         s_height={"100px"}
-        s_bg_color={roomColor.StudyRoom}
+        s_bg_color={roomColor.Study}
       />
       <RoomComponent
         r_type={"study"}
@@ -55,7 +55,7 @@ export default function FifthFloor() {
         s_top={"0px"}
         s_width={"100px"}
         s_height={"150px"}
-        s_bg_color={roomColor.StudyRoom}
+        s_bg_color={roomColor.Study}
       />
 
       {/*    aj room*/}
@@ -66,7 +66,7 @@ export default function FifthFloor() {
         s_top={"400px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -75,7 +75,7 @@ export default function FifthFloor() {
         s_top={"350px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -84,7 +84,7 @@ export default function FifthFloor() {
         s_top={"460px"}
         s_width={"50px"}
         s_height={"40px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -93,7 +93,7 @@ export default function FifthFloor() {
         s_top={"450px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -102,7 +102,7 @@ export default function FifthFloor() {
         s_top={"200px"}
         s_width={"50px"}
         s_height={"100px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -111,7 +111,7 @@ export default function FifthFloor() {
         s_top={"200px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -120,7 +120,7 @@ export default function FifthFloor() {
         s_top={"250px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -129,7 +129,7 @@ export default function FifthFloor() {
         s_top={"300px"}
         s_width={"60px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -138,7 +138,7 @@ export default function FifthFloor() {
         s_top={"255px"}
         s_width={"50px"}
         s_height={"45px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -147,7 +147,7 @@ export default function FifthFloor() {
         s_top={"255px"}
         s_width={"50px"}
         s_height={"45px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -156,7 +156,7 @@ export default function FifthFloor() {
         s_top={"200px"}
         s_width={"50px"}
         s_height={"45px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -165,7 +165,7 @@ export default function FifthFloor() {
         s_top={"0px"}
         s_width={"50px"}
         s_height={"100px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -174,7 +174,7 @@ export default function FifthFloor() {
         s_top={"100px"}
         s_width={"30px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -183,7 +183,7 @@ export default function FifthFloor() {
         s_top={"150px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
       <RoomComponent
         r_type={"arjan"}
@@ -192,7 +192,7 @@ export default function FifthFloor() {
         s_top={"150px"}
         s_width={"50px"}
         s_height={"50px"}
-        s_bg_color={roomColor.ArjarnRoom}
+        s_bg_color={roomColor.Arjarn}
       />
 
       {/*    lab room*/}
@@ -203,7 +203,7 @@ export default function FifthFloor() {
         s_top={"500px"}
         s_width={"200px"}
         s_height={"100px"}
-        s_bg_color={roomColor.LabRoom}
+        s_bg_color={roomColor.Lab}
       />
 
       {/*    Network room*/}
@@ -214,7 +214,7 @@ export default function FifthFloor() {
         s_top={"0px"}
         s_width={"50px"}
         s_height={"100px"}
-        s_bg_color={roomColor.AdminRoom}
+        s_bg_color={roomColor.Admin}
       />
 
       {/*    Lift*/}
