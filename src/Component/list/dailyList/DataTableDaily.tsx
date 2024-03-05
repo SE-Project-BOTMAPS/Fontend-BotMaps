@@ -5,9 +5,12 @@ import { Column } from "primereact/column";
 
 interface AccordionTabDailyProp {
   data?: ResponseEvent[];
+  fontSize?: string;
+  signageRowHeight?: string;
 }
 
-export const DataTableDaily: React.FC<AccordionTabDailyProp> = ({ data }) => {
+
+export const DataTableDaily: React.FC<AccordionTabDailyProp> = ({ data, fontSize, signageRowHeight }) => {
   const getCurrentTime = (): string => {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, "0");
@@ -23,16 +26,16 @@ export const DataTableDaily: React.FC<AccordionTabDailyProp> = ({ data }) => {
   return (
     <DataTable
       value={data}
-      tableStyle={{ minWidth: "30rem" }}
+      tableStyle={{ minWidth: "30rem", fontSize: fontSize || "inherit" }}
       rowHover
       rowClassName={(rowData) =>
         isCurrentTime(rowData.start_dt, rowData.end_dt) ? "bg-black text-white" : ""
       }
     >
-      <Column field="location" header="Room" sortable></Column>
+      <Column field="location" header="Room" sortable ></Column>
       <Column
         header="Range of time"
-        body={(rowData) => (
+        body={(rowData) => (  
           <div>
             <p>
               {rowData.start_dt} - {rowData.end_dt}

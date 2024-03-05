@@ -13,9 +13,10 @@ import type { Events } from "../../../../state/slices/types/sideBar.type.ts";
 interface listData {
   data?: Events;
   floor?: number;
+  fontSize?: string;
 }
 
-const DailyList: React.FC<listData> = ({ data, floor }) => {
+const DailyList: React.FC<listData> = ({ data, floor, fontSize }) => {
   const [currentDay, setCurrentDay] = React.useState("");
 
   const formatDate = (date: Date) => {
@@ -63,12 +64,12 @@ const DailyList: React.FC<listData> = ({ data, floor }) => {
           <sup>th</sup> Floor Study Room
         </h3>
 
-        <DataTableDaily data={data?.study} />
+        <DataTableDaily data={data?.study} fontSize={fontSize} />
         <h3 className="font-bold">
           {floor}
           <sup>th</sup> Floor Reserve Room
         </h3>
-        <DataTableDaily data={data?.reserve} />
+        <DataTableDaily data={data?.reserve} fontSize={fontSize}/>
       </div>
     </div>
   );

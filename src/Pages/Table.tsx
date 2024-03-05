@@ -22,14 +22,14 @@ const Table = () => {
   return (
     <div>
       <div
-    className="flex justify-center py-10 "
+    className="flex justify-center pt-10 "
       >
-        <img src="/Logo/botmapsLogo.png" width={350} alt={"logo"} />
+        <img src="/Logo/botmapsLogo.png" width={300} alt={"logo"} />
       </div>
-      <hr />
+      {/* <hr /> */}
       <div>
-        <div className="mt-5 px-8 ">
-          <DailyList data={sideBarState?.events} floor={Number(floor)}/>
+        <div className="px-8 ">
+          <DailyList data={sideBarState?.events} floor={Number(floor)} fontSize="20px"/>
         </div>
       </div>
     </div>
